@@ -1,0 +1,300 @@
+<title>Adir Vicente</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Adir Vicente — Senior Software Engineer and Tech Lead. Java, AWS, Kafka and AI-driven architectures.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one narrow reading column; career rendered as an event log (partition/offset), metrics set like a ledger. */
+:root {
+  --paper: #f2f4f6;
+  --surface: #ffffff;
+  --ink: #0f1a29;
+  --muted: #56627a;
+  --line: #d6dce5;
+  --accent: #1f43c9;
+  --accent-soft: #e3e9fb;
+  --signal: #b4570d;
+  --f-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --f-body: "Public Sans", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0c121c; --surface: #131b28; --ink: #e6ebf3; --muted: #95a1b6;
+    --line: #253145; --accent: #8ea6ff; --accent-soft: #1b2847; --signal: #f0a35e;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0c121c; --surface: #131b28; --ink: #e6ebf3; --muted: #95a1b6;
+  --line: #253145; --accent: #8ea6ff; --accent-soft: #1b2847; --signal: #f0a35e;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--paper); color: var(--ink);
+  font-family: var(--f-body); font-size: 16px; line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+.wrap { max-width: 980px; margin: 0 auto; padding-block: 56px 72px; display: grid; gap: 88px; }
+
+/* labels */
+.label { font-family: var(--f-mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+h2 { font-family: var(--f-display); font-weight: 700; font-size: clamp(26px, 4vw, 34px); line-height: 1.15; margin: 6px 0 0; text-wrap: balance; letter-spacing: -.01em; }
+.sec-head { display: grid; gap: 2px; margin-bottom: 28px; }
+
+/* hero */
+.hero { display: grid; gap: 28px; }
+.topline { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; justify-content: space-between; }
+.status { display: inline-flex; align-items: center; gap: 8px; font-family: var(--f-mono); font-size: 13px; color: var(--muted); }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: #2f9e5b; box-shadow: 0 0 0 4px color-mix(in srgb, #2f9e5b 20%, transparent); }
+h1 { font-family: var(--f-display); font-weight: 800; font-size: clamp(44px, 9vw, 96px); line-height: .95; letter-spacing: -.035em; margin: 0; text-wrap: balance; }
+h1 span { color: var(--accent); }
+.role { font-family: var(--f-display); font-weight: 500; font-size: clamp(19px, 2.6vw, 25px); line-height: 1.3; margin: 0; max-width: 34ch; text-wrap: balance; }
+.intro { max-width: 62ch; color: var(--muted); margin: 0; font-size: 17px; }
+.links { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; font: 500 14px var(--f-body);
+  padding: 10px 16px; border-radius: 999px; border: 1px solid var(--line);
+  background: var(--surface); color: var(--ink); text-decoration: none; cursor: pointer;
+}
+.btn:hover { border-color: var(--accent); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--surface); }
+.btn svg { width: 16px; height: 16px; flex: none; }
+
+/* ledger of results */
+.ledger { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 2px solid var(--ink); border-bottom: 1px solid var(--line); }
+.ledger div { padding: 18px 16px 18px 0; display: grid; gap: 4px; align-content: start; }
+.ledger div + div { padding-left: 16px; border-left: 1px solid var(--line); }
+.ledger b { font-family: var(--f-display); font-weight: 700; font-size: clamp(28px, 4.4vw, 42px); line-height: 1; font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
+.ledger span { font-size: 13.5px; color: var(--muted); line-height: 1.4; }
+
+/* case studies */
+.cases { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.case { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 24px; display: grid; gap: 12px; align-content: start; }
+.case .client { display: flex; justify-content: space-between; gap: 12px; font-family: var(--f-mono); font-size: 12px; color: var(--muted); letter-spacing: .04em; }
+.case h3 { font-family: var(--f-display); font-weight: 700; font-size: 21px; line-height: 1.2; margin: 0; text-wrap: balance; }
+.case p { margin: 0; color: var(--muted); font-size: 15px; }
+.case .result { font-family: var(--f-mono); font-size: 13px; color: var(--signal); }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.tags li { font-family: var(--f-mono); font-size: 11.5px; padding: 3px 8px; border-radius: 6px; background: var(--accent-soft); color: var(--accent); }
+
+/* event log timeline */
+.log { list-style: none; margin: 0; padding: 0; border-left: 1px solid var(--line); }
+.evt { position: relative; padding: 0 0 30px 26px; display: grid; gap: 4px; }
+.evt::before { content: ""; position: absolute; left: -5px; top: 9px; width: 9px; height: 9px; border-radius: 50%; background: var(--paper); border: 2px solid var(--accent); }
+.evt:last-child { padding-bottom: 0; }
+.meta { font-family: var(--f-mono); font-size: 12px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px 14px; }
+.meta .off { color: var(--accent); }
+.evt h3 { margin: 0; font-family: var(--f-display); font-weight: 700; font-size: 19px; line-height: 1.3; }
+.evt h3 small { font-family: var(--f-body); font-weight: 400; font-size: 15px; color: var(--muted); }
+.evt p { margin: 0; max-width: 68ch; font-size: 15px; color: var(--muted); }
+
+/* skills */
+.skills { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 32px; }
+.skills h3 { margin: 0 0 8px; font-family: var(--f-mono); font-weight: 500; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+.skills p { margin: 0; font-size: 15px; }
+
+/* education + contact */
+.two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
+.two p { margin: 0 0 10px; font-size: 15px; }
+.two p span { color: var(--muted); }
+.contact { background: var(--ink); color: var(--paper); border-radius: 18px; padding: clamp(28px, 5vw, 48px); display: grid; gap: 18px; }
+.contact h2 { color: var(--paper); }
+.contact .label { color: color-mix(in srgb, var(--paper) 65%, var(--ink)); }
+.contact p { margin: 0; max-width: 56ch; color: color-mix(in srgb, var(--paper) 80%, var(--ink)); }
+.mail { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+.mail code { font-family: var(--f-mono); font-size: clamp(16px, 3vw, 22px); user-select: all; word-break: break-all; }
+.contact .btn { background: transparent; color: var(--paper); border-color: color-mix(in srgb, var(--paper) 35%, var(--ink)); }
+.contact .btn:hover { border-color: var(--paper); }
+footer { font-family: var(--f-mono); font-size: 12px; color: var(--muted); text-align: center; }
+
+@media (max-width: 760px) {
+  .wrap { gap: 64px; padding-block: 32px 48px; }
+  .ledger { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ledger div:nth-child(3) { padding-left: 0; border-left: 0; }
+  .ledger div:nth-child(n+3) { border-top: 1px solid var(--line); }
+  .cases, .two { grid-template-columns: 1fr; }
+  .skills { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 460px) { .skills { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: no-preference) {
+  .hero > * { animation: rise .6s cubic-bezier(.2,.7,.2,1) both; }
+  .hero > *:nth-child(2) { animation-delay: .05s; } .hero > *:nth-child(3) { animation-delay: .1s; }
+  .hero > *:nth-child(4) { animation-delay: .15s; } .hero > *:nth-child(5) { animation-delay: .2s; }
+  @keyframes rise { from { transform: translateY(10px); opacity: .01; } to { transform: none; opacity: 1; } }
+}
+</style>
+
+<main class="wrap">
+  <header class="hero">
+    <div class="topline">
+      <span class="label">Cascavel, Brazil · Remote</span>
+      <span class="status"><span class="dot"></span>Open to Senior Engineer &amp; Tech Lead roles (US / EU)</span>
+    </div>
+    <h1>Adir Vicente<span>.</span></h1>
+    <p class="role">Senior Software Engineer &amp; Tech Lead. Java, AWS, Kafka and AI-driven architectures.</p>
+    <p class="intro">13 years building high-throughput payments, banking and retail systems. I specialize in low-latency, event-driven microservices and in moving legacy platforms to the cloud, including multi-agent AI in CI/CD pipelines and LLM-driven COBOL-to-Java migration.</p>
+    <nav class="links" aria-label="Profiles">
+      <a class="btn primary" href="#contact">Get in touch</a>
+      <a class="btn" href="https://linkedin.com/in/adirvic" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.8v1.5h.06c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.1v5.45h-4v-4.83c0-1.15-.02-2.63-1.6-2.63-1.6 0-1.85 1.25-1.85 2.55v4.91h-4v-11Z"/></svg>LinkedIn</a>
+      <a class="btn" href="https://github.com/adirvic" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>GitHub</a>
+    </nav>
+    <div class="ledger" aria-label="Selected results">
+      <div><b>−99.5%</b><span>batch processing time on Mastercard payment systems</span></div>
+      <div><b>50</b><span>COBOL repositories migrated to Java by LLM agents</span></div>
+      <div><b>99.9%+</b><span>availability across nationwide retail at Via Varejo</span></div>
+      <div><b>13 yrs</b><span>shipping Java in payments, banking and retail</span></div>
+    </div>
+  </header>
+
+  <section aria-labelledby="work">
+    <div class="sec-head"><span class="label">Selected work</span><h2 id="work">Systems I designed and led</h2></div>
+    <div class="cases">
+      <article class="case">
+        <div class="client"><span>MASTERCARD · USA</span><span>2025–2026</span></div>
+        <h3>Low-latency core payment processing</h3>
+        <p>Re-architected batch flows in Java 21 microservices with in-memory caching and targeted JVM tuning to remove critical bottlenecks.</p>
+        <span class="result">→ batch window cut by 99.5%</span>
+        <ul class="tags"><li>Java 21</li><li>Spring Boot</li><li>JVM tuning</li><li>Caching</li></ul>
+      </article>
+      <article class="case">
+        <div class="client"><span>MASTERCARD · USA</span><span>2025–2026</span></div>
+        <h3>LLM-driven COBOL-to-Java modernization</h3>
+        <p>Autonomous multi-agent AI in CI/CD that converts legacy COBOL into cloud-native Spring Boot services, with custom EBCDIC parsing libraries and Flyway-governed schemas.</p>
+        <span class="result">→ 50 repos migrated, 100% test coverage, delivery +200%</span>
+        <ul class="tags"><li>Multi-agent AI</li><li>Python</li><li>COBOL</li><li>EBCDIC</li></ul>
+      </article>
+      <article class="case">
+        <div class="client"><span>SERASA EXPERIAN · BRAZIL</span><span>2025</span></div>
+        <h3>Real-time anti-fraud verification engine</h3>
+        <p>Asynchronous identity checks against 12 national data authorities, built as high-concurrency event-driven services on AWS with zero-downtime scaling.</p>
+        <span class="result">→ lower identity-fraud exposure for banking clients</span>
+        <ul class="tags"><li>Java 17</li><li>AWS SQS</li><li>DynamoDB</li><li>Event-driven</li></ul>
+      </article>
+      <article class="case">
+        <div class="client"><span>VIA VAREJO · BRAZIL</span><span>2021–2024</span></div>
+        <h3>E-commerce that survives mainframe outages</h3>
+        <p>Automated circuit-breaker bypass in Quarkus that fails real-time queries over to MongoDB, plus Kafka pipelines routing retail transactions between cloud and core systems.</p>
+        <span class="result">→ zero e-commerce downtime during outages</span>
+        <ul class="tags"><li>Quarkus</li><li>Kafka</li><li>MongoDB</li><li>Circuit breaker</li></ul>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="exp">
+    <div class="sec-head"><span class="label">topic: career · newest first</span><h2 id="exp">Experience</h2></div>
+    <ol class="log">
+      <li class="evt">
+        <div class="meta"><span class="off">offset 10</span><span>Jul 2025 – Oct 2026</span><span>GFT Technologies · Remote</span></div>
+        <h3>Mastercard <small>— Senior Software Engineer</small></h3>
+        <p>Low-latency payment processing, autonomous AI agents in CI/CD, and mainframe-to-cloud migration with full data fidelity.</p>
+      </li>
+      <li class="evt">
+        <div class="meta"><span class="off">offset 9</span><span>Feb 2025 – Jul 2025</span><span>GFT Technologies · Remote</span></div>
+        <h3>Serasa Experian <small>— Tech Lead</small></h3>
+        <p>Scalable anti-fraud verification engine on AWS for enterprise banking and commercial clients.</p>
+      </li>
+      <li class="evt">
+        <div class="meta"><span class="off">offset 8</span><span>Aug 2024 – Feb 2025</span><span>GFT Technologies · Remote</span></div>
+        <h3>Toyota Bank <small>— Tech Lead</small></h3>
+        <p>Connected-vehicle banking: streamed vehicle telemetry through TIBCO ESB into mainframe and SQL databases, linking each vehicle to its contract data.</p>
+      </li>
+      <li class="evt">
+        <div class="meta"><span class="off">offset 7</span><span>Jul 2021 – Aug 2024</span><span>GFT Technologies · Remote</span></div>
+        <h3>Via Varejo <small>— Tech Lead</small></h3>
+        <p>Led frontend, backend and QA teams for Casas Bahia and Ponto Frio e-commerce; Kafka pipelines, multi-tenancy and resilience patterns.</p>
+      </li>
+      <li class="evt">
+        <div class="meta"><span class="off">offset 6</span><span>Mar 2021 – Jul 2021</span><span>Wipro · Remote</span></div>
+        <h3>Wipro <small>— Senior Software Engineer</small></h3>
+        <p>High-concurrency microservices for the Next Joy Pix instant-payment engine (Brazil's national real-time payment system).</p>
+      </li>
+      <li class="evt">
+        <div class="meta"><span class="off">offset 5</span><span>Aug 2020 – Mar 2021</span><span>Atos · Remote</span></div>
+        <h3>Atos <small>— Senior Software Engineer</small></h3>
+        <p>Spring Batch processing for Elo card brand, calculating acquirer fees across billions of daily transactions.</p>
+      </li>
+      <li class="evt">
+        <div class="meta"><span class="off">offset 4</span><span>Nov 2019 – Aug 2020</span><span>Cambé, Brazil</span></div>
+        <h3>Muffato Group <small>— Tech Lead / Software Engineer</small></h3>
+        <p>CDC-based incremental sync engine that replaced nightly batches with 5-minute e-commerce updates.</p>
+      </li>
+      <li class="evt">
+        <div class="meta"><span class="off">offset 3</span><span>Apr 2019 – Oct 2019</span><span>Cascavel, Brazil</span></div>
+        <h3>Datacoper <small>— Senior Software Engineer</small></h3>
+        <p>Java and Spring Boot microservices and REST APIs for agribusiness ERP/CRM on Oracle DB.</p>
+      </li>
+      <li class="evt">
+        <div class="meta"><span class="off">offset 2</span><span>Aug 2017 – Jan 2019</span><span>Dois Vizinhos, Brazil</span></div>
+        <h3>CISS <small>— Senior Software Engineer</small></h3>
+        <p>Automated invoice ingestion and inventory processing integrated with SEFAZ tax-authority web services.</p>
+      </li>
+      <li class="evt">
+        <div class="meta"><span class="off">offset 1</span><span>Feb 2013 – Aug 2017</span><span>Cascavel, Brazil</span></div>
+        <h3>Linx <small>— Software Engineer</small></h3>
+        <p>Real-time inventory sync across 250 retail stores, connecting POS and ERP to SAP and Oracle.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="skills">
+    <div class="sec-head"><span class="label">Stack</span><h2 id="skills">What I work with</h2></div>
+    <div class="skills">
+      <div><h3>Languages &amp; frameworks</h3><p>Java 8–21, Kotlin, Python, Spring Boot, Spring Batch, Quarkus, React</p></div>
+      <div><h3>Architecture</h3><p>Microservices, event-driven, low-latency JVM tuning, in-memory caching, circuit breaker, CDC, multi-tenancy</p></div>
+      <div><h3>Messaging &amp; data</h3><p>Apache Kafka, AWS SQS, TIBCO ESB, PostgreSQL, Oracle, MySQL, DynamoDB, MongoDB, Flyway</p></div>
+      <div><h3>Cloud &amp; DevOps</h3><p>AWS (SQS, DynamoDB, Lambda), GCP, Docker, Kubernetes, GitHub Actions, GitLab CI</p></div>
+      <div><h3>Applied AI</h3><p>Multi-agent systems, LLM integration (GPT-4, Claude, Gemini), Vertex AI, prompt engineering, CI/CD agents</p></div>
+      <div><h3>Mainframe &amp; legacy</h3><p>COBOL, EBCDIC, mainframe modernization, SAP integration</p></div>
+    </div>
+  </section>
+
+  <section class="two">
+    <div>
+      <div class="sec-head"><span class="label">Education</span><h2>Background</h2></div>
+      <p>B.Sc. Systems Analysis &amp; Development<br><span>Univel University Center, Brazil · 2012–2016</span></p>
+      <p>Google Cloud certifications (2023)<br><span>Generative AI Fundamentals · Search &amp; Conversational AI in Vertex AI · Prompt Design · Responsible AI</span></p>
+    </div>
+    <div>
+      <div class="sec-head"><span class="label">Languages</span><h2>I work in</h2></div>
+      <p>English<br><span>Professional working proficiency</span></p>
+      <p>Portuguese<br><span>Native</span></p>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="ct">
+    <span class="label">Contact</span>
+    <h2 id="ct">Let's talk about your next system.</h2>
+    <p>I'm looking for remote Senior Software Engineer and Tech Lead roles with US and European teams.</p>
+    <div class="mail">
+      <code id="email">adirvic@gmail.com</code>
+      <button class="btn" id="copy" type="button">Copy email</button>
+    </div>
+    <div class="links">
+      <a class="btn" href="https://linkedin.com/in/adirvic" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/adirvic" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </section>
+
+  <footer>© 2026 Adir Vicente Rodrigues Junior</footer>
+</main>
+
+<script>
+document.getElementById("copy").addEventListener("click", async (e) => {
+  const btn = e.currentTarget, text = document.getElementById("email").textContent;
+  try { await navigator.clipboard.writeText(text); btn.textContent = "Copied"; }
+  catch {
+    const r = document.createRange(); r.selectNodeContents(document.getElementById("email"));
+    const s = getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = "Selected, press Ctrl+C";
+  }
+  setTimeout(() => (btn.textContent = "Copy email"), 2200);
+});
+</script>
