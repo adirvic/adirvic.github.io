@@ -118,12 +118,59 @@ h1 span { color: var(--accent); }
 .contact .btn:hover { border-color: var(--paper); }
 footer { font-family: var(--f-mono); font-size: 12px; color: var(--muted); text-align: center; }
 
+/* about */
+.about { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 40px; align-items: start; }
+.story p { margin: 0 0 14px; max-width: 64ch; }
+.story p:first-child::first-letter { font-family: var(--f-display); font-weight: 800; font-size: 3.1em; float: left; line-height: .9; margin: 4px 10px 0 0; color: var(--accent); }
+.nick { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 18px; padding: 0; list-style: none; }
+.nick li { font-family: var(--f-mono); font-size: 12px; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); }
+.aside { display: grid; gap: 16px; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 22px; display: grid; gap: 14px; }
+.panel h3 { margin: 0; font-family: var(--f-mono); font-weight: 500; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+.goals { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.goals li { display: grid; grid-template-columns: 64px 1fr; gap: 10px; font-size: 15px; }
+.goals b { font-family: var(--f-mono); font-weight: 500; font-size: 12px; color: var(--signal); padding-top: 3px; letter-spacing: .04em; }
+.steps { margin: 0; padding-left: 18px; display: grid; gap: 8px; font-size: 15px; }
+.steps li::marker { color: var(--accent); }
+
+/* contact form */
+.form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 6px; }
+.form label { display: grid; gap: 6px; font-size: 13px; color: color-mix(in srgb, var(--paper) 75%, var(--ink)); }
+.form .full { grid-column: 1 / -1; }
+.form input, .form select, .form textarea {
+  font: 400 15px var(--f-body); color: var(--paper); width: 100%;
+  background: color-mix(in srgb, var(--paper) 7%, var(--ink));
+  border: 1px solid color-mix(in srgb, var(--paper) 25%, var(--ink)); border-radius: 10px; padding: 11px 12px;
+}
+.form textarea { min-height: 140px; resize: vertical; }
+.form input:focus-visible, .form select:focus-visible, .form textarea:focus-visible { outline: 2px solid var(--paper); outline-offset: 1px; }
+.form select option { color: initial; }
+.kinds { display: flex; flex-wrap: wrap; gap: 8px; border: 0; margin: 0; padding: 0; }
+.kinds legend { font-size: 13px; margin-bottom: 8px; padding: 0; color: color-mix(in srgb, var(--paper) 75%, var(--ink)); }
+.kinds input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.kinds span { display: inline-block; font-size: 14px; padding: 7px 14px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--paper) 30%, var(--ink)); cursor: pointer; }
+.kinds input:checked + span { background: var(--paper); color: var(--ink); border-color: var(--paper); }
+.kinds input:focus-visible + span { outline: 2px solid var(--paper); outline-offset: 2px; }
+.form .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; }
+.contact .btn.send { background: var(--paper); color: var(--ink); border-color: var(--paper); }
+.contact .btn.send:disabled { opacity: .6; cursor: progress; }
+.form-status { font-size: 14px; }
+.hp { position: absolute; left: -9999px; }
+.or { font-size: 14px; }
+
+/* consent */
+.consent { position: fixed; z-index: 10; left: 16px; right: 16px; bottom: 16px; max-width: 520px; margin-inline: auto;
+  background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.18); display: grid; gap: 12px; font-size: 14px; }
+.consent p { margin: 0; color: var(--muted); }
+.consent div { display: flex; gap: 8px; flex-wrap: wrap; }
+
 @media (max-width: 760px) {
   .wrap { gap: 64px; padding-block: 32px 48px; }
   .ledger { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .ledger div:nth-child(3) { padding-left: 0; border-left: 0; }
   .ledger div:nth-child(n+3) { border-top: 1px solid var(--line); }
-  .cases, .two { grid-template-columns: 1fr; }
+  .cases, .two, .about, .form { grid-template-columns: 1fr; }
   .skills { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 460px) { .skills { grid-template-columns: 1fr; } }
@@ -161,6 +208,43 @@ body{margin:0}img{max-width:100%}[hidden]{display:none!important}
       <div><b>13 yrs</b><span>shipping Java in payments, banking and retail</span></div>
     </div>
   </header>
+
+  <section id="about" aria-labelledby="about-h">
+    <div class="sec-head"><span class="label">About</span><h2 id="about-h">From a small farm to global payment systems</h2></div>
+    <div class="about">
+      <div class="story">
+        <p>I grew up on a small farm in the countryside of Paraná, Brazil, and didn't touch a computer until I was 15. Owning one, or paying for a course, was out of reach. At 17 I bought my first PC and started repairing other people's machines, the one tech job open to someone with no experience.</p>
+        <p>During military service I ran IT for the battalion's first section, working every day alongside the captain and senior officers. Then came technical support, and at 22 I started college. In my first year I stood out in programming and logic, and my Java professor invited me to interview at the company where he worked. That is how I became a developer, at Softpharma, acquired by Linx two years later.</p>
+        <p>Since then I've had ups and downs, but I've always been the person teams turn to for the hardest problem of the moment. Along the way people gave me a few nicknames:</p>
+        <ul class="nick" aria-label="Nicknames">
+          <li>the JTable guy</li><li>the JavaFX guy</li><li>the WSDL guy</li><li>the invoice guy</li>
+        </ul>
+        <p>At CISS I found a new SEFAZ tax-authority service that nobody had built on yet, and designed and built a complete invoice-import product around it, from idea to architecture to code. At Elo I'd often close a week's worth of work in the first hours, then use the slack to optimize our Control-M job orchestration.</p>
+        <p>At GFT I learned to lead and to grow other engineers, and became the Java specialist people call for complex problems. Today I work in GFT's international unit, building payment systems for Mastercard.</p>
+        <!-- TODO(adir): optional sentence about the family period, pending your decision -->
+      </div>
+      <div class="aside">
+        <div class="panel">
+          <h3>Where I'm heading</h3>
+          <!-- TODO(adir): replace Next/Later with your own 3- and 5-year goals -->
+          <ul class="goals">
+            <li><b>NOW</b><span>A remote Senior Software Engineer role with a US or European team.</span></li>
+            <li><b>NEXT</b><span>Staff / principal engineer, owning architecture for critical systems.</span></li>
+            <li><b>LATER</b><span>Leading platform strategy and mentoring the next generation of engineers.</span></li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>How I'm getting there</h3>
+          <!-- TODO(adir): add specifics (frequency, current level, target, certifications in progress) -->
+          <ol class="steps">
+            <li>Investing heavily in my English, with a focus on conversation and day-to-day work with international teams.</li>
+            <li>Working daily with applied AI: multi-agent systems and LLMs in real delivery pipelines.</li>
+            <li>Deepening cloud architecture on AWS and GCP.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section aria-labelledby="work">
     <div class="sec-head"><span class="label">Selected work</span><h2 id="work">Systems I designed and led</h2></div>
@@ -280,7 +364,27 @@ body{margin:0}img{max-width:100%}[hidden]{display:none!important}
   <section class="contact" id="contact" aria-labelledby="ct">
     <span class="label">Contact</span>
     <h2 id="ct">Let's talk about your next system.</h2>
-    <p>I'm looking for remote Senior Software Engineer roles with US and European teams.</p>
+    <p>I'm looking for remote Senior Software Engineer roles with US and European teams. Job offers are welcome, and so are suggestions, kind words and honest criticism of this site.</p>
+    <form class="form" id="contact-form" novalidate>
+      <fieldset class="kinds full">
+        <legend>What is this about?</legend>
+        <label><input type="radio" name="topic" value="Job proposal" checked><span>Job proposal</span></label>
+        <label><input type="radio" name="topic" value="Suggestion"><span>Suggestion</span></label>
+        <label><input type="radio" name="topic" value="Compliment"><span>Compliment</span></label>
+        <label><input type="radio" name="topic" value="Criticism"><span>Criticism</span></label>
+        <label><input type="radio" name="topic" value="Other"><span>Other</span></label>
+      </fieldset>
+      <label>Name<input name="name" autocomplete="name" required></label>
+      <label>Email<input name="email" type="email" autocomplete="email" required></label>
+      <label class="full"><span>Company (optional)</span><input name="company" autocomplete="organization"></label>
+      <label class="full">Message<textarea name="message" required></textarea></label>
+      <input class="hp" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="actions full">
+        <button class="btn send" type="submit">Send message</button>
+        <span class="form-status" id="form-status" role="status" aria-live="polite"></span>
+      </div>
+    </form>
+    <p class="or">Prefer email?</p>
     <div class="mail">
       <code id="email">adirvic@gmail.com</code>
       <button class="btn" id="copy" type="button">Copy email</button>
@@ -294,6 +398,14 @@ body{margin:0}img{max-width:100%}[hidden]{display:none!important}
   <footer>© 2026 Adir Vicente Rodrigues Junior</footer>
 </main>
 
+<div class="consent" id="consent" role="region" aria-label="Cookie consent" hidden>
+  <p>I use Microsoft Clarity to see how visitors use this page (anonymous heatmaps and visit recordings). Can it use cookies?</p>
+  <div>
+    <button class="btn primary" type="button" data-consent="yes">Accept</button>
+    <button class="btn" type="button" data-consent="no">Decline</button>
+  </div>
+</div>
+
 <script>
 document.getElementById("copy").addEventListener("click", async (e) => {
   const btn = e.currentTarget, text = document.getElementById("email").textContent;
@@ -303,7 +415,71 @@ document.getElementById("copy").addEventListener("click", async (e) => {
     const s = getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = "Selected, press Ctrl+C";
   }
   setTimeout(() => (btn.textContent = "Copy email"), 2200);
+  track("copy_email");
 });
+
+/* Contact form via Web3Forms (static-site friendly). The access key is public by design. */
+const WEB3FORMS_KEY = "YOUR_WEB3FORMS_ACCESS_KEY";
+const form = document.getElementById("contact-form"), formStatus = document.getElementById("form-status");
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  if (!form.reportValidity()) return;
+  const data = Object.fromEntries(new FormData(form));
+  if (data.botcheck) return;
+  const btn = form.querySelector("button[type=submit]");
+  btn.disabled = true; formStatus.textContent = "Sending…";
+  try {
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify({ ...data, access_key: WEB3FORMS_KEY, subject: `[Portfolio] ${data.topic} from ${data.name}`, from_name: "adirvic.github.io", replyto: data.email })
+    });
+    const out = await res.json();
+    if (!out.success) throw new Error(out.message);
+    form.reset(); formStatus.textContent = "Thanks! Your message reached me, I'll reply soon.";
+    track("contact_sent"); track("contact_" + data.topic.toLowerCase().replace(/\s+/g, "_"));
+  } catch {
+    formStatus.textContent = "Something went wrong. Please email me at adirvic@gmail.com.";
+  } finally { btn.disabled = false; }
+});
+
+/* Analytics: Microsoft Clarity (countries, heatmaps, scroll depth, session recordings). */
+const CLARITY_ID = "YOUR_CLARITY_PROJECT_ID";
+(function (c, l, a, r, i, t, y) {
+  c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+  t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+  y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+})(window, document, "clarity", "script", CLARITY_ID);
+function track(name) { try { window.clarity("event", name); } catch {} }
+document.addEventListener("click", (e) => {
+  const a = e.target.closest("a[href]");
+  if (!a) return;
+  const h = a.getAttribute("href");
+  if (h.includes("linkedin.com")) track("click_linkedin");
+  else if (h.includes("github.com")) track("click_github");
+  else if (h === "#contact") track("click_get_in_touch");
+});
+new IntersectionObserver((entries, obs) => {
+  entries.forEach((en) => { if (en.isIntersecting) { track("view_" + en.target.id); obs.unobserve(en.target); } });
+}, { threshold: 0.4 }).observe(document.getElementById("about"));
+
+/* Cookie consent: Clarity runs cookieless until the visitor accepts. */
+function setConsent(granted) {
+  try { window.clarity("consentv2", { ad_Storage: "denied", analytics_Storage: granted ? "granted" : "denied" }); } catch {}
+}
+let choice = null;
+try { choice = localStorage.getItem("consent"); } catch {}
+if (choice) setConsent(choice === "yes");
+else {
+  const bar = document.getElementById("consent");
+  bar.hidden = false;
+  bar.addEventListener("click", (e) => {
+    const v = e.target.dataset.consent;
+    if (!v) return;
+    setConsent(v === "yes");
+    try { localStorage.setItem("consent", v); } catch {}
+    bar.hidden = true;
+  });
+}
 </script>
 </body>
 </html>
