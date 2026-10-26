@@ -445,7 +445,8 @@ form.addEventListener("submit", async (e) => {
 
 /* Analytics: Microsoft Clarity (countries, heatmaps, scroll depth, session recordings). */
 const CLARITY_ID = "YOUR_CLARITY_PROJECT_ID";
-(function (c, l, a, r, i, t, y) {
+const CLARITY_ON = !CLARITY_ID.startsWith("YOUR_");
+if (CLARITY_ON) (function (c, l, a, r, i, t, y) {
   c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
   t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
   y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
@@ -470,7 +471,7 @@ function setConsent(granted) {
 let choice = null;
 try { choice = localStorage.getItem("consent"); } catch {}
 if (choice) setConsent(choice === "yes");
-else {
+else if (CLARITY_ON) {
   const bar = document.getElementById("consent");
   bar.hidden = false;
   bar.addEventListener("click", (e) => {
