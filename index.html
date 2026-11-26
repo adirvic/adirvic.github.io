@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Adir Vicente</title>
-<meta name="description" content="Adir Vicente — Senior Software Engineer. Java, AWS, Kafka and AI-driven architectures.">
+<meta name="description" content="Adir Vicente — Hands-on Tech Lead &amp; Senior Software Engineer. Java, distributed architecture and applied AI.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
@@ -108,6 +108,10 @@ h1 span { color: var(--accent); }
 .did { list-style: disc; margin: 4px 0 6px; padding-left: 18px; display: grid; gap: 5px; max-width: 72ch; font-size: 15px; color: var(--muted); }
 .did li::marker { color: var(--accent); }
 .did b { color: var(--ink); font-weight: 600; }
+.ctx, .impact { margin: 2px 0 4px; max-width: 72ch; font-size: 15px; color: var(--muted); }
+.ctx b, .impact b { color: var(--ink); font-weight: 600; }
+.impact { color: var(--signal); }
+.impact b { color: inherit; }
 .evt .tags { margin-top: 4px; }
 .cv-line { margin-top: 18px !important; }
 html[lang="pt-BR"] [data-only="en"], html:not([lang="pt-BR"]) [data-only="pt-BR"] { display: none; }
@@ -203,7 +207,7 @@ body{margin:0}img{max-width:100%}[hidden]{display:none!important}
     <div class="topline">
       <span class="label" data-i18n="loc">Cascavel, Brazil · Remote</span>
       <div class="topline-end">
-        <span class="status"><span class="dot"></span><span data-i18n="status">Open to Senior Software Engineer roles (US / EU)</span></span>
+        <span class="status"><span class="dot"></span><span data-i18n="status">Open to remote Tech Lead / Senior roles · full-time or B2B</span></span>
         <div class="lang" role="group" aria-label="Language / Idioma">
           <button type="button" data-lang="en" lang="en" aria-label="English (US)" title="English (US)">EN</button>
           <button type="button" data-lang="pt-BR" lang="pt-BR" aria-label="Português (Brasil)" title="Português (Brasil)">PT</button>
@@ -211,8 +215,8 @@ body{margin:0}img{max-width:100%}[hidden]{display:none!important}
       </div>
     </div>
     <h1>Adir Vicente<span>.</span></h1>
-    <p class="role" data-i18n="role">Senior Software Engineer. Java, AWS, Kafka and AI-driven architectures.</p>
-    <p class="intro" data-i18n="intro">13 years building high-throughput payments, banking and retail systems. I specialize in low-latency, event-driven microservices and in moving legacy platforms to the cloud, including multi-agent AI in CI/CD pipelines and LLM-driven COBOL-to-Java migration.</p>
+    <p class="role" data-i18n="role">Hands-on Tech Lead &amp; Senior Software Engineer. Java, distributed architecture and applied AI.</p>
+    <p class="intro" data-i18n="intro">I modernize and scale critical payment, banking and retail platforms. 12+ years building distributed Java systems, including 4 years as Tech Lead for clients such as Serasa Experian, Toyota Bank and Via Varejo. I combine resilient architecture with applied AI to ship faster and with less risk. As a hands-on Tech Lead I own architecture decisions, write code every day and guide the squad through to production.</p>
     <nav class="links" aria-label="Profiles" data-i18n-aria="profiles">
       <a class="btn primary" href="#contact" data-i18n="cta">Get in touch</a>
       <a class="btn cv" href="cv/Adir-Vicente-Resume-EN.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M5 21h14"/></svg><span data-i18n="cv">Download CV (PDF)</span></a>
@@ -225,7 +229,7 @@ body{margin:0}img{max-width:100%}[hidden]{display:none!important}
       <div><b data-i18n="l1n">−99.5%</b><span data-i18n="l1">batch time on 30+ Mastercard payment jobs, from 10 hours to 3 minutes</span></div>
       <div><b>50</b><span data-i18n="l2">COBOL repositories migrated to Java by LLM agents</span></div>
       <div><b data-i18n="l3n">99.9%+</b><span data-i18n="l3">availability across nationwide retail at Via Varejo</span></div>
-      <div><b data-i18n="l4n">13 yrs</b><span data-i18n="l4">shipping Java in payments, banking and retail</span></div>
+      <div><b data-i18n="l4n">12+ yrs</b><span data-i18n="l4">building distributed Java systems, 4 as Tech Lead</span></div>
     </div>
   </header>
 
@@ -273,7 +277,7 @@ body{margin:0}img{max-width:100%}[hidden]{display:none!important}
         <div class="client"><span data-i18n="c_mc">MASTERCARD · USA</span><span>2025–2026</span></div>
         <h3 data-i18n="c1h">Low-latency core payment processing</h3>
         <p data-i18n="c1p">Re-architected batch flows in Java 21 microservices with in-memory caching and targeted JVM tuning to remove critical bottlenecks.</p>
-        <span class="result" data-i18n="c1r">→ batch window cut by 99.5%</span>
+        <span class="result" data-i18n="c1r">→ 30+ batch jobs from ~10 hours to 3 minutes</span>
         <ul class="tags"><li>Java 21</li><li>Spring Boot</li><li>JVM tuning</li><li data-i18n="t_cache">Caching</li></ul>
       </article>
       <article class="case">
@@ -302,107 +306,159 @@ body{margin:0}img{max-width:100%}[hidden]{display:none!important}
 
   <section aria-labelledby="exp">
     <div class="sec-head"><span class="label" data-i18n="exp">topic: career · newest first</span><h2 id="exp" data-i18n="exp_h">Experience</h2></div>
-    <p class="exp-note" data-i18n="exp_note">Since 2021 at GFT Technologies, a global IT consultancy for financial services, as Senior Software Engineer and Tech Lead for the clients below.</p>
+    <p class="exp-note" data-i18n="exp_note">Jul 2021 – Oct 2026 at GFT Technologies, a global IT consultancy for financial services, as Tech Lead and Java Specialist allocated to the clients below.</p>
     <ol class="log">
       <li class="evt">
         <div class="meta"><span class="off">offset 10</span><span data-i18n-date>Jul 2025 – Oct 2026</span><span data-i18n="gft_us">GFT Technologies · Remote · client in the USA</span></div>
-        <h3>Mastercard <small data-i18n="r_sse">— Senior Software Engineer</small></h3>
-        <ul class="did" data-only="en">
-          <li>Cut 30+ core payment batch jobs from ~10 hours to ~3 minutes with low-latency in-memory caching and fixes to critical JVM bottlenecks in Java 21 microservices.</li>
-          <li>Reduced delivery cycles from 2 weeks to 1 day with autonomous multi-agent AI in CI/CD that generates, tests and validates Java/Spring Boot code.</li>
-          <li>Shipped 50 Java 21/Spring Boot microservice repositories with 95% test coverage, using LLM-driven agents to translate legacy COBOL business rules into clean, cloud-native Java.</li>
-          <li>Zero output divergence, proven by a character-level comparison suite and reusable parsing libraries shared across global teams; zero-downtime schema migrations with Flyway.</li>
-        </ul>
-        <ul class="did" data-only="pt-BR">
-          <li>Reduzi o tempo de mais de 30 jobs batch de pagamentos de cerca de 10 horas para 3 minutos, com cache em memória de baixa latência e correção de gargalos de JVM em microsserviços Java 21.</li>
-          <li>Reduzi o ciclo de entrega de 2 semanas para 1 dia com sistemas multiagentes de IA no pipeline de CI/CD, que geram, testam e validam código Java/Spring Boot.</li>
-          <li>Entreguei 50 repositórios de microsserviços Java 21/Spring Boot com 95% de cobertura de testes, usando agentes com LLM para traduzir regras de negócio legadas em COBOL.</li>
-          <li>Garanti zero divergência de resultados com uma suíte de comparação caractere a caractere e bibliotecas Java de parsing compartilhadas com times globais; migrações de banco sem downtime com Flyway.</li>
-        </ul>
+        <h3>Mastercard <small data-i18n="r_js">— Java Specialist</small></h3>
+        <div data-only="en">
+          <p class="ctx"><b>Context:</b> modernization of payment batch processing, migrating COBOL/mainframe business rules to Java 21 microservices.</p>
+          <ul class="did">
+            <li>Fixed critical JVM bottlenecks and built low-latency in-memory caching across 30+ payment batch jobs: from ~10 hours to 3 minutes.</li>
+            <li>Designed autonomous multi-agent AI systems in CI/CD that generate, test and validate Java/Spring Boot code: delivery cycle from 2 weeks to 1 day.</li>
+            <li>Shipped 50 Java 21/Spring Boot microservice repositories with 95% test coverage, using LLM-driven agents to translate COBOL rules and custom EBCDIC parsing libraries shared across global teams.</li>
+            <li>Took technical ownership of several workstreams without formal people management: zero-downtime Flyway migrations, DB2-to-Oracle conversion, COBOL file conversion (hex, binary and COMP-3) to text, and comparison-logic validation, ensuring zero output divergence.</li>
+          </ul>
+          <p class="impact"><b>Business impact:</b> payment legacy modernized with controlled risk, with no output divergence and no downtime during the migration.</p>
+        </div>
+        <div data-only="pt-BR">
+          <p class="ctx"><b>Contexto:</b> modernização do processamento batch de pagamentos, migrando regras de negócio de COBOL/mainframe para microsserviços Java 21.</p>
+          <ul class="did">
+            <li>Corrigi gargalos de JVM e criei cache em memória de baixa latência em mais de 30 jobs batch de pagamentos: de cerca de 10 horas para 3 minutos.</li>
+            <li>Desenhei sistemas multiagentes de IA no pipeline de CI/CD que geram, testam e validam código Java/Spring Boot: ciclo de entrega de 2 semanas para 1 dia.</li>
+            <li>Entreguei 50 repositórios de microsserviços Java 21/Spring Boot com 95% de cobertura de testes, usando agentes com LLM para traduzir regras COBOL e bibliotecas próprias de parsing EBCDIC compartilhadas com times globais.</li>
+            <li>Assumi a frente técnica de várias entregas sem gestão formal de pessoas: migrações de banco sem downtime com Flyway, conversão de DB2 para Oracle, conversão de arquivos COBOL (hexadecimal, binário e COMP-3) para texto e a validação da lógica de comparação, garantindo zero divergência de resultados.</li>
+          </ul>
+          <p class="impact"><b>Impacto no negócio:</b> modernização do legado de pagamentos com risco controlado, sem divergência de resultados nem indisponibilidade durante a migração.</p>
+        </div>
         <ul class="tags"><li>Java 21</li><li>Spring Boot</li><li>Spring Batch</li><li data-i18n="t_multi">Multi-agent AI</li><li>LLMs</li><li>Python</li><li>COBOL</li><li>Flyway</li><li>JUnit</li></ul>
       </li>
       <li class="evt">
         <div class="meta"><span class="off">offset 9</span><span data-i18n-date>Feb 2025 – Jul 2025</span><span data-i18n="gft">GFT Technologies · Remote</span></div>
         <h3>Serasa Experian <small>— Tech Lead</small></h3>
-        <ul class="did" data-only="en">
-          <li>Led the squad end to end, from architecture to production, on an identity verification and anti-fraud engine, including liveness checks.</li>
-          <li>Designed real-time asynchronous checks against 12 national data authorities and event-driven APIs sharing risk data with partner platforms, blocking fraudulent account creation.</li>
-          <li>Result: sub-second responses and 99.99% availability under high volume.</li>
-        </ul>
-        <ul class="did" data-only="pt-BR">
-          <li>Liderei o squad da arquitetura à produção em um motor de verificação de identidade e antifraude, incluindo prova de vida.</li>
-          <li>Desenhei consultas assíncronas em tempo real a 12 bases de dados nacionais e APIs orientadas a eventos para compartilhar dados de risco com parceiros, bloqueando a criação de contas fraudulentas.</li>
-          <li>Resultado: respostas abaixo de 1 segundo e 99,99% de disponibilidade em alto volume.</li>
-        </ul>
+        <div data-only="en">
+          <p class="ctx"><b>Context:</b> brought in to deliver an identity verification and anti-fraud engine (including liveness checks) that stops fraudulent account creation.</p>
+          <ul class="did">
+            <li>Led the squad as a hands-on Tech Lead from architecture to production: architecture decisions, technical guidance and code in Java 17, Spring Boot, AWS SQS and DynamoDB.</li>
+            <li>Designed real-time asynchronous checks against 12 national data authorities and event-driven APIs sharing risk data with partner platforms.</li>
+            <li>Result: sub-second responses and 99.99% availability under high volume.</li>
+          </ul>
+          <p class="impact"><b>Business impact:</b> fraudulent accounts blocked at sign-up without slowing down the journey for legitimate customers.</p>
+        </div>
+        <div data-only="pt-BR">
+          <p class="ctx"><b>Contexto:</b> alocado para entregar um motor de verificação de identidade e antifraude (incluindo prova de vida) que impede a criação de contas fraudulentas.</p>
+          <ul class="did">
+            <li>Liderei o squad como Tech Lead hands-on, da arquitetura à produção: decisões arquiteturais, orientação técnica do time e código em Java 17, Spring Boot, AWS SQS e DynamoDB.</li>
+            <li>Desenhei consultas assíncronas em tempo real a 12 bases de dados nacionais e APIs orientadas a eventos para compartilhar dados de risco com parceiros.</li>
+            <li>Resultado: respostas abaixo de 1 segundo e 99,99% de disponibilidade em alto volume.</li>
+          </ul>
+          <p class="impact"><b>Impacto no negócio:</b> bloqueio de contas fraudulentas no momento do cadastro, sem tornar mais lenta a jornada do cliente legítimo.</p>
+        </div>
         <ul class="tags"><li>Java 17</li><li>Spring Boot</li><li>AWS SQS</li><li>DynamoDB</li><li data-i18n="t_event">Event-driven</li></ul>
       </li>
       <li class="evt">
         <div class="meta"><span class="off">offset 8</span><span data-i18n-date>Aug 2024 – Feb 2025</span><span data-i18n="gft">GFT Technologies · Remote</span></div>
         <h3>Toyota Bank <small>— Tech Lead</small></h3>
-        <ul class="did" data-only="en">
-          <li>Coordinated business, integration and core-banking teams to deliver a high-complexity connected-vehicle integration across contracts, insurance and financing.</li>
-          <li>Built SOAP/REST integrations via TIBCO ESB streaming vehicle telemetry into core banking, linking each vehicle to its contract so the bank could locate vehicles of delinquent customers.</li>
-        </ul>
-        <ul class="did" data-only="pt-BR">
-          <li>Coordenei times de negócio, integração e core bancário na entrega de uma integração de veículos conectados com contratos, seguros e financiamento.</li>
-          <li>Construí integrações SOAP/REST via TIBCO ESB que levam a telemetria dos veículos ao core bancário, ligando cada veículo ao seu contrato para o banco localizar veículos de clientes inadimplentes.</li>
-        </ul>
+        <div data-only="en">
+          <p class="ctx"><b>Context:</b> brought in to solve a high-complexity integration between connected vehicles, contracts, insurance and financing, spanning business, integration and core-banking teams.</p>
+          <ul class="did">
+            <li>Coordinated business, integration and core-banking teams, aligning requirements and technical decisions through delivery.</li>
+            <li>Built SOAP/REST integrations via TIBCO ESB streaming vehicle telemetry into core banking and linking each vehicle to its contract.</li>
+          </ul>
+          <p class="impact"><b>Business impact:</b> the bank could locate vehicles of delinquent customers, supporting credit recovery.</p>
+        </div>
+        <div data-only="pt-BR">
+          <p class="ctx"><b>Contexto:</b> alocado para resolver uma integração de alta complexidade entre veículos conectados, contratos, seguros e financiamento, envolvendo times de negócio, integração e core bancário.</p>
+          <ul class="did">
+            <li>Coordenei os times de negócio, integração e core bancário, alinhando requisitos e decisões técnicas até a entrega.</li>
+            <li>Construí integrações SOAP/REST via TIBCO ESB que levam a telemetria dos veículos ao core bancário e ligam cada veículo ao seu contrato.</li>
+          </ul>
+          <p class="impact"><b>Impacto no negócio:</b> o banco passou a localizar veículos de clientes inadimplentes, apoiando a recuperação de crédito.</p>
+        </div>
         <ul class="tags"><li>Java</li><li>Kotlin</li><li>SOAP</li><li>REST</li><li>TIBCO ESB</li><li>SQL</li></ul>
       </li>
       <li class="evt">
         <div class="meta"><span class="off">offset 7</span><span data-i18n-date>Jul 2021 – Aug 2024</span><span data-i18n="gft">GFT Technologies · Remote</span></div>
         <h3>Via Varejo <small>— Tech Lead · Casas Bahia, Ponto Frio</small></h3>
-        <ul class="did" data-only="en">
-          <li>Eliminated e-commerce downtime during core-system outages with an automated circuit breaker in Quarkus that fails real-time queries over to MongoDB.</li>
-          <li>Sustained 99.9%+ availability on multi-tenant Java microservices while leading frontend, backend, QA and core-systems teams from discovery to delivery.</li>
-          <li>Built high-throughput, event-driven pipelines with Apache Kafka and Quarkus between cloud applications and core retail systems.</li>
-          <li>Built push-notification flows with AWS SQS and SNS, and stored sensitive customer data on S3 with encryption for LGPD compliance.</li>
-        </ul>
-        <ul class="did" data-only="pt-BR">
-          <li>Eliminei a indisponibilidade do e-commerce durante quedas dos sistemas core, com um circuit breaker em Quarkus que redireciona consultas em tempo real para o MongoDB.</li>
-          <li>Mantive mais de 99,9% de disponibilidade em microsserviços Java multi-tenant, liderando times de frontend, backend, QA e sistemas core da descoberta à entrega.</li>
-          <li>Construí pipelines de alto volume orientados a eventos com Apache Kafka e Quarkus entre a nuvem e os sistemas core do varejo.</li>
-          <li>Criei fluxos de push notification do app com AWS SQS e SNS e armazenamento de dados sensíveis no S3 com criptografia, em conformidade com a LGPD.</li>
-        </ul>
+        <div data-only="en">
+          <p class="ctx"><b>Context:</b> e-commerce and app for major retail chains that went down whenever core systems failed.</p>
+          <ul class="did">
+            <li>Led frontend, backend, QA and core-systems teams from discovery to delivery as a hands-on Tech Lead.</li>
+            <li>Designed an automated circuit breaker in Quarkus with MongoDB fallback that keeps real-time queries running during core-system outages.</li>
+            <li>Built high-throughput, event-driven pipelines with Apache Kafka and Quarkus between cloud and core retail systems; push-notification flows with AWS SQS and SNS; sensitive data on Amazon S3 with encryption.</li>
+            <li>Result: no e-commerce downtime during core-system outages and 99.9%+ availability on multi-tenant microservices.</li>
+          </ul>
+          <p class="impact"><b>Business impact:</b> online sales kept running through core failures, and customer data handled in line with LGPD (Brazil's data-protection law).</p>
+        </div>
+        <div data-only="pt-BR">
+          <p class="ctx"><b>Contexto:</b> e-commerce e app de grandes redes de varejo, que paravam quando os sistemas core caíam.</p>
+          <ul class="did">
+            <li>Liderei times de frontend, backend, QA e sistemas core da descoberta à entrega, como Tech Lead hands-on.</li>
+            <li>Desenhei um circuit breaker em Quarkus com fallback em MongoDB que mantém as consultas em tempo real durante quedas dos sistemas core.</li>
+            <li>Construí pipelines de alto volume orientados a eventos com Apache Kafka e Quarkus entre a nuvem e os sistemas core; fluxos de push notification com AWS SQS e SNS; dados sensíveis no S3 com criptografia.</li>
+            <li>Resultado: e-commerce sem indisponibilidade durante falhas dos sistemas core e mais de 99,9% de disponibilidade nos microsserviços multi-tenant.</li>
+          </ul>
+          <p class="impact"><b>Impacto no negócio:</b> continuidade das vendas online mesmo com falhas no core e tratamento de dados de clientes em conformidade com a LGPD.</p>
+        </div>
         <ul class="tags"><li>Java</li><li>Quarkus</li><li>Apache Kafka</li><li>AWS SQS · SNS · S3</li><li>MongoDB</li><li>React</li></ul>
       </li>
       <li class="evt">
         <div class="meta"><span class="off">offset 6</span><span data-i18n-date>Mar 2021 – Jul 2021</span><span data-i18n="wipro">Wipro · Remote · client Banco Next</span></div>
         <h3>Wipro <small data-i18n="r_sse">— Senior Software Engineer</small></h3>
-        <ul class="did" data-only="en">
-          <li>Helped build from scratch a new Pix instant-payment engine for Next Joy, a digital bank account for kids and teens, with high-concurrency microservices.</li>
-          <li>Delivered the core architecture and the main real-time transfer flows of the greenfield product.</li>
-        </ul>
-        <ul class="did" data-only="pt-BR">
-          <li>Participei da construção, do zero, do motor de pagamentos Pix do Next Joy, conta digital para crianças e adolescentes, com microsserviços de alta concorrência.</li>
-          <li>Entregamos a arquitetura base e os principais fluxos de transferência em tempo real.</li>
-        </ul>
+        <div data-only="en">
+          <p class="ctx"><b>Context:</b> greenfield Pix instant-payment engine for Next Joy, a digital bank account for kids and teens.</p>
+          <ul class="did">
+            <li>Built high-concurrency microservices in Java 11, Spring Boot and Apache Kafka.</li>
+            <li>Result: core architecture and main real-time transfer flows delivered.</li>
+          </ul>
+        </div>
+        <div data-only="pt-BR">
+          <p class="ctx"><b>Contexto:</b> novo motor de pagamentos Pix do Next Joy, conta digital para crianças e adolescentes, construído do zero.</p>
+          <ul class="did">
+            <li>Desenvolvi microsserviços de alta concorrência em Java 11, Spring Boot e Apache Kafka.</li>
+            <li>Resultado: arquitetura base e principais fluxos de transferência em tempo real entregues.</li>
+          </ul>
+        </div>
         <ul class="tags"><li>Java 11</li><li>Spring Boot</li><li>Apache Kafka</li><li>REST</li></ul>
       </li>
       <li class="evt">
         <div class="meta"><span class="off">offset 5</span><span data-i18n-date>Aug 2020 – Feb 2021</span><span data-i18n="atos">Atos · Remote · client Elo</span></div>
         <h3>Atos <small data-i18n="r_sse">— Senior Software Engineer</small></h3>
-        <ul class="did" data-only="en">
-          <li>Maintained and evolved production microservices and Spring Batch jobs that calculate and split transaction fees for Elo, a Brazilian card brand.</li>
-          <li>Implemented new fee rules, such as lower fees for high-volume merchants (large retail chains) and the standard fee for small businesses.</li>
-        </ul>
-        <ul class="did" data-only="pt-BR">
-          <li>Mantive e evoluí microsserviços e jobs Spring Batch em produção que calculam e dividem as taxas das transações da bandeira Elo.</li>
-          <li>Implementei novas regras de negócio, como taxas diferenciadas conforme o perfil do estabelecimento: grandes redes de alto volume com taxa menor e pequenos comércios com a taxa padrão.</li>
-        </ul>
+        <div data-only="en">
+          <p class="ctx"><b>Context:</b> production microservices and Spring Batch jobs that calculate and split transaction fees for Elo, a Brazilian card brand.</p>
+          <ul class="did">
+            <li>Maintained and evolved the services and implemented new fee rules by merchant profile: lower fees for high-volume chains, the standard fee for small businesses.</li>
+          </ul>
+          <p class="impact"><b>Business impact:</b> Elo could apply differentiated fees by merchant profile.</p>
+        </div>
+        <div data-only="pt-BR">
+          <p class="ctx"><b>Contexto:</b> microsserviços e jobs Spring Batch em produção que calculam e dividem as taxas das transações da bandeira Elo.</p>
+          <ul class="did">
+            <li>Mantive e evoluí os serviços e implementei regras de taxa por perfil de estabelecimento: taxa menor para grandes redes de alto volume, taxa padrão para pequenos comércios.</li>
+          </ul>
+          <p class="impact"><b>Impacto no negócio:</b> a Elo passou a aplicar taxas diferenciadas por perfil de estabelecimento.</p>
+        </div>
         <ul class="tags"><li>Java 11</li><li>Spring Batch</li><li>Apache Kafka</li><li>SQL</li></ul>
       </li>
       <li class="evt">
         <div class="meta"><span class="off">offset 4</span><span data-i18n-date>Nov 2019 – Aug 2020</span><span data-i18n="londrina">Londrina, Brazil</span></div>
         <h3 data-i18n="muffato">Muffato Group <small>— Tech Lead / Software Engineer</small></h3>
-        <ul class="did" data-only="en">
-          <li>Led engineering for the launch of online sales during the pandemic, building a Java/MySQL incremental sync engine based on Change Data Capture (CDC).</li>
-          <li>Result: stock updates went from once a night to every 5 minutes, without overloading store databases.</li>
-        </ul>
-        <ul class="did" data-only="pt-BR">
-          <li>Liderei a engenharia do lançamento das vendas online durante a pandemia, com um motor de sincronização incremental em Java e MySQL baseado em Change Data Capture (CDC).</li>
-          <li>Resultado: a atualização de estoque passou de 1 vez por noite para a cada 5 minutos, sem sobrecarregar os bancos das lojas.</li>
-        </ul>
+        <div data-only="en">
+          <p class="ctx"><b>Context:</b> launch of online sales during the pandemic, with store inventory updated only once a night.</p>
+          <ul class="did">
+            <li>Led engineering and built a Java/MySQL incremental sync engine based on Change Data Capture (CDC).</li>
+            <li>Result: stock updated every 5 minutes instead of once a night, without overloading store databases.</li>
+          </ul>
+          <p class="impact"><b>Business impact:</b> enabled online sales during the pandemic with near-real-time stock.</p>
+        </div>
+        <div data-only="pt-BR">
+          <p class="ctx"><b>Contexto:</b> lançamento das vendas online durante a pandemia, com o estoque das lojas atualizado apenas uma vez por noite.</p>
+          <ul class="did">
+            <li>Liderei a engenharia e construí um motor de sincronização incremental em Java e MySQL baseado em Change Data Capture (CDC).</li>
+            <li>Resultado: estoque atualizado a cada 5 minutos em vez de 1 vez por noite, sem sobrecarregar os bancos das lojas.</li>
+          </ul>
+          <p class="impact"><b>Impacto no negócio:</b> viabilizou a venda online durante a pandemia com estoque próximo do real.</p>
+        </div>
         <ul class="tags"><li>Java</li><li>MySQL</li><li>CDC</li><li>REST</li></ul>
       </li>
       <li class="evt">
@@ -490,7 +546,7 @@ body{margin:0}img{max-width:100%}[hidden]{display:none!important}
   <section class="contact" id="contact" aria-labelledby="ct">
     <span class="label" data-i18n="contact">Contact</span>
     <h2 id="ct" data-i18n="ct">Let's talk about your next system.</h2>
-    <p data-i18n="ct_p">I'm looking for remote Senior Software Engineer roles with US and European teams. Job offers are welcome, and so are suggestions, kind words and honest criticism of this site.</p>
+    <p data-i18n="ct_p">I'm looking for remote Tech Lead or Senior Software Engineer roles, full-time or contract (B2B), with US time-zone overlap. Job offers are welcome, and so are suggestions, kind words and honest criticism of this site.</p>
     <form class="form" id="contact-form" novalidate>
       <fieldset class="kinds full">
         <legend data-i18n="legend">What is this about?</legend>
@@ -537,18 +593,18 @@ body{margin:0}img{max-width:100%}[hidden]{display:none!important}
    Long blocks (experience bullets) are written in both languages in the HTML and switched with [data-only].
    Short English text lives in the HTML; this table holds the pt-BR version of every [data-i18n] / [data-i18n-aria] key. */
 const PT = {
-  meta_desc: "Adir Vicente — Engenheiro de Software Sênior. Java, AWS, Kafka e arquiteturas orientadas a IA.",
+  meta_desc: "Adir Vicente — Tech Lead hands-on e Engenheiro de Software Sênior. Java, arquitetura distribuída e IA aplicada.",
   loc: "Cascavel, Brasil · Remoto",
-  status: "Aberto a vagas de Senior Software Engineer (EUA / Europa)",
-  role: "Engenheiro de Software Sênior. Java, AWS, Kafka e arquiteturas orientadas a IA.",
-  intro: "13 anos construindo sistemas de alto volume para pagamentos, bancos e varejo. Sou especialista em microsserviços orientados a eventos e de baixa latência, e em levar plataformas legadas para a nuvem, incluindo IA multiagente em pipelines de CI/CD e migração de COBOL para Java com LLMs.",
+  status: "Aberto a vagas remotas de Tech Lead / Sênior · tempo integral ou contrato (B2B)",
+  role: "Tech Lead hands-on e Engenheiro de Software Sênior. Java, arquitetura distribuída e IA aplicada.",
+  intro: "Modernizo e escalo plataformas críticas de pagamentos, bancos e varejo. São mais de 12 anos construindo sistemas Java distribuídos, sendo 4 anos como Tech Lead em clientes como Serasa Experian, Toyota Bank e Via Varejo. Combino arquitetura resiliente e IA aplicada para entregar mais rápido e com menos risco. Como Tech Lead hands-on, tomo as decisões arquiteturais, escrevo código no dia a dia e oriento o squad até a produção.",
   profiles: "Perfis",
   cta: "Fale comigo",
   results: "Resultados em destaque",
   l1n: "−99,5%", l1: "no tempo de mais de 30 jobs batch de pagamento da Mastercard, de 10 horas para 3 minutos",
   l2: "repositórios COBOL migrados para Java por agentes de LLM",
   l3n: "99,9%+", l3: "de disponibilidade no varejo em todo o Brasil na Via Varejo",
-  l4n: "13 anos", l4: "entregando Java em pagamentos, bancos e varejo",
+  l4n: "12+ anos", l4: "construindo sistemas Java distribuídos, 4 como Tech Lead",
 
   about: "Sobre", about_h: "De um pequeno sítio a sistemas de pagamento globais",
   p1: "Cresci num pequeno sítio no interior do Paraná e só fui mexer num computador aos 15 anos. Ter um, ou pagar um curso, estava fora do meu alcance. Aos 17 comprei meu primeiro PC e comecei a consertar computadores dos outros, o único trabalho em tecnologia aberto para quem não tinha experiência.",
@@ -573,7 +629,7 @@ const PT = {
   c_mc: "MASTERCARD · EUA", c_se: "SERASA EXPERIAN · BRASIL", c_vv: "VIA VAREJO · BRASIL",
   c1h: "Processamento de pagamentos de baixa latência",
   c1p: "Rearquitetei fluxos batch em microsserviços Java 21 com cache em memória e tuning de JVM direcionado para eliminar gargalos críticos.",
-  c1r: "→ janela de batch reduzida em 99,5%",
+  c1r: "→ mais de 30 jobs batch de cerca de 10 horas para 3 minutos",
   c2h: "Modernização de COBOL para Java com LLMs",
   c2p: "IA multiagente autônoma em CI/CD que converte COBOL legado em serviços Spring Boot cloud-native, com bibliotecas próprias de parsing EBCDIC e schemas versionados com Flyway.",
   c2r: "→ 50 repositórios, 95% de cobertura de testes, ciclo de entrega de 2 semanas para 1 dia",
@@ -586,12 +642,12 @@ const PT = {
   t_cache: "Cache", t_multi: "IA multiagente", t_event: "Orientado a eventos",
 
   exp: "topic: carreira · mais recentes primeiro", exp_h: "Experiência",
-  exp_note: "Desde 2021 na GFT Technologies, consultoria global de TI para serviços financeiros, como Engenheiro de Software Sênior e Tech Lead nos clientes abaixo.",
+  exp_note: "De jul/2021 a out/2026 na GFT Technologies, consultoria global de TI para serviços financeiros, como Tech Lead e Especialista Java alocado nos clientes abaixo.",
   gft: "GFT Technologies · Remoto", gft_us: "GFT Technologies · Remoto · cliente nos EUA",
   wipro: "Wipro · Remoto · cliente Banco Next", atos: "Atos · Remoto · cliente Elo",
   londrina: "Londrina, Brasil", cascavel: "Cascavel, Brasil", dv: "Dois Vizinhos, Brasil",
   early_loc: "Cascavel e Corbélia, Brasil",
-  r_sse: "— Engenheiro de Software Sênior", r_se: "— Engenheiro de Software",
+  r_sse: "— Engenheiro de Software Sênior", r_js: "— Especialista Java", r_se: "— Engenheiro de Software",
   r_ciss: "— Desenvolvedor Java Pleno, promovido a Sênior",
   muffato: "Grupo Muffato <small>— Tech Lead / Engenheiro de Software</small>",
   early: "Experiência anterior <small>— TI antes do software</small>",
@@ -613,7 +669,7 @@ const PT = {
   pt: "Português<br><span>Nativo</span>",
 
   contact: "Contato", ct: "Vamos conversar sobre o seu próximo sistema.",
-  ct_p: "Estou buscando vagas remotas de Senior Software Engineer em times dos EUA e da Europa. Propostas de trabalho são bem-vindas, assim como sugestões, elogios e críticas sinceras sobre este site.",
+  ct_p: "Estou buscando vagas remotas de Tech Lead ou Engenheiro de Software Sênior, em tempo integral ou contrato (B2B), com sobreposição de fuso com os EUA. Propostas de trabalho são bem-vindas, assim como sugestões, elogios e críticas sinceras sobre este site.",
   legend: "Sobre o que é?",
   tp1: "Proposta de trabalho", tp2: "Sugestão", tp3: "Elogio", tp4: "Crítica", tp5: "Outro",
   f_name: "Nome", f_email: "E-mail", f_company: "Empresa (opcional)", f_msg: "Mensagem",
